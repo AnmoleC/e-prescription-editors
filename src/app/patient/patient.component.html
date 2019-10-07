@@ -1,0 +1,44 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  Patient Information
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName" required>
+  </label>
+
+  <label>
+    Middle Name:
+    <input type="text" formControlName="middleName">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+
+  <label>
+    Patient ID Number:
+    <input type="text" formControlName="patientID">
+  </label>
+
+  <label>
+    Patient ID Type:
+    <input type="text" formControlName="patientIDType">
+  </label>
+
+  <label>
+    Date of Birth:
+    <input type="text" formControlName="dob">
+  </label>
+
+  <label>
+    Gender:
+    <input type="text" formControlName="gender">
+  </label>
+
+  <label>
+    Blood Type:
+    <input type="text" formControlName="bloodType">
+  </label>
+
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+  </form>

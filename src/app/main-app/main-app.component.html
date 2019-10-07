@@ -1,0 +1,8 @@
+<nav>
+  <a (click)="toggleEditor('Doctor')">Doctor Editor</a>
+  <a (click)="toggleEditor('Patient')">Patient Editor</a>
+</nav>
+
+<app-doctor *ngIf="showDoctorEditor"></app-doctor>
+<app-patient *ngIf="showPatientEditor"></app-patient>
+

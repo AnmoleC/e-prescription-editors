@@ -1,0 +1,20 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  Doctor Information
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName" required>
+  </label>
+
+  <label>
+    Middle Name:
+    <input type="text" formControlName="middleName">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+
+
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
